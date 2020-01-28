@@ -35,11 +35,5 @@ public class ConsoleExercises {
 //        System.out.println("The area of the Codeup classroom is: --> \"" + length*width + "\" <--");
 //        System.out.println("The perimeter of the Codeup classroom is: --> \"" + ((2*length)+(2*width)) + "\" <--");
 
-
-
-
-
-
-
     }
 }
