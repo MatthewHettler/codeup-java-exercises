@@ -8,18 +8,26 @@ public class Bob {
 //        He says 'Fine. Be that way!' if you address him without actually saying anything. (empty input)
 //        He answers 'Whatever.' to anything else.
 
+        while (true) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Ask Bob a question, yell at him, or say nothing, it's your choice... ");
+            String userInput = scanner.nextLine();
+            if (userInput.endsWith("?")) {
+                System.out.println("Sure.");
+            } else if (userInput.endsWith("!")) {
+                System.out.println("Whoa, chill out!");
+            } else if (userInput.equals("")) {
+                System.out.println("Fine. Be that way!");
+            } else {
+                System.out.println("Whatever.");
+            }
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Ask Bob a question, yell at him, or say nothing, it's your choice... ");
-        String userInput = scanner.nextLine();
-        if (userInput.endsWith("?")) {
-            System.out.println("Sure.");
-        } else if (userInput.endsWith("!")) {
-            System.out.println("Whoa, chill out!");
-        } else if (userInput.equals("")) {
-            System.out.println("Fine. Be that way!");
-        } else {
-            System.out.println("Whatever.");
+            System.out.println("Do you want to keep talking to Bob? y/n ");
+            String option = scanner.nextLine();
+            if (!option.equalsIgnoreCase("y")) {
+                System.out.println("Goodbye, until next time.");
+                break;
+            }
         }
 
     }
