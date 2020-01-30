@@ -28,7 +28,7 @@ public class MethodsExercises {
 //        System.out.println(getfactorial());
 
 //       ***** Exercise 4: Dice Game *****
-//        System.out.println(diceGame());
+        System.out.println(diceGame());
 
 
     }
@@ -119,8 +119,8 @@ public class MethodsExercises {
             roll = dice1 + dice2;
 
             if (option.equalsIgnoreCase("roll")) {
-                System.out.println("The first die comes up " + dice1);
-                System.out.println("The second die comes up " + dice2);
+                System.out.println("The first dice comes up " + dice1);
+                System.out.println("The second dice comes up " + dice2);
                 System.out.println("Your total roll is " + roll + ".");
             }
 
