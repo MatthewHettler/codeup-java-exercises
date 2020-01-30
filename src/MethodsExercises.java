@@ -25,7 +25,7 @@ public class MethodsExercises {
 
 
 //       ***** Exercise 3: Calculate the factorial of a number.. *****
-
+        System.out.println(getfactorial());
 
 
     }
@@ -55,27 +55,46 @@ public class MethodsExercises {
 
 //       ***** Exercise 2 Methods *****
 
-    public static int getInteger(int min, int max) {
-        System.out.print("Enter a number between " + min + " and " + max + ": ");
-        Scanner scanner = new Scanner(System.in);
-        int userInput = scanner.nextInt();
-        if (userInput < min || userInput > max) {
-            System.out.println("The number shown below must be within " + min + " and " + max + ".");
-        } else if (userInput > min & userInput < max) {
-            System.out.println("Here is your inputted number: ");
-        }
-        return userInput;
-    }
+//    public static int getInteger(int min, int max) {
+//        System.out.print("Enter a number between " + min + " and " + max + ": ");
+//        Scanner scanner = new Scanner(System.in);
+//        int userInput = scanner.nextInt();
+//        if (userInput < min || userInput > max) {
+//            System.out.println("The number shown below must be within " + min + " and " + max + ".");
+//        } else if (userInput > min & userInput < max) {
+//            System.out.println("Here is your inputted number: ");
+//        }
+//        return userInput;
+//    }
 
 
 //       ***** Exercise 3 Methods *****
 
-    public static int getfactoral (int num){
-        return placeholder;
+    public static long getfactorial() {
+
+        while (true) {
+            System.out.println("Please enter an integer from 1 to 10: ");
+            Scanner scanner = new Scanner(System.in);
+            long number = scanner.nextInt();
+            long fact = 1;
+                for (long i = 1; i <= number; i++) {
+                    fact = fact * i;
+                }
+                System.out.println("Factorial of " + number + " is: " + fact + ".");
+
+            System.out.println("Do you want to continue? y/n ");
+            Scanner scanner2 = new Scanner(System.in);
+            String option = scanner2.nextLine();
+            if (!option.equalsIgnoreCase("y")) {
+                System.out.println("Goodbye, until next time. Your last factorial was: ");
+                return fact;
+            }
+        }
+
     }
 
 
 
-
 }
+
 
