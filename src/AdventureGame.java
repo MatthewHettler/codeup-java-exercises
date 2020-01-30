@@ -40,7 +40,7 @@ public class AdventureGame {
         Scanner scanner = new Scanner(System.in);
         String option = scanner.nextLine();
 
-        int userName;
+        String userName;
 
 
         if (option.equalsIgnoreCase("yes")) {
@@ -60,7 +60,9 @@ public class AdventureGame {
             System.out.println(knightElement);
             System.out.println("Sir Knight, what is your name?\n");
             Scanner scanner2 = new Scanner(System.in);
-            userName = scanner2.nextInt();
+            userName = scanner2.next();
+            System.out.println(userName + ", huh?"); // userName, huh?
+            System.out.println("That's a great name!\n");
 
         }
 
