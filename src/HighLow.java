@@ -15,9 +15,10 @@ public class HighLow {
         int upperbound = 101;
         int int_random = rand.nextInt(upperbound);
 
+        System.out.println("Try to guess the number between 1 and 100! : ");
+
         do {
 
-            System.out.println("Try to guess the number between 1 and 100! : ");
             Scanner scanner = new Scanner(System.in);
             int guess = scanner.nextInt();
 
