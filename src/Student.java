@@ -9,16 +9,16 @@ public class Student {
     boolean drinksCoffee;
 
     public static void main(String[] args) {
-        Student matthew = new Student();
-        matthew.name = "Matthew";
+        Student matthew = new Student("Matthew");
+//        matthew.name = "Matthew";
         matthew.drinksCoffee = true;
         matthew.cohort = "Europa";
         matthew.startDate = new Date("11/4/2019");
         matthew.program = "Web Development";
         matthew.location = "San Antonio";
 
-        Student miguel = new Student();
-        miguel.name = "Miguel";
+        Student miguel = new Student("Miguel");
+//        miguel.name = "Miguel";
         miguel.cohort = "Europa";
         miguel.startDate = new Date("November 4, 2019");
         miguel.program = "Web Development";
@@ -29,6 +29,10 @@ public class Student {
         System.out.println(miguel.report());
         if (matthew.drinksCoffee)
             System.out.println(matthew.name + " drinks coffee.");
+    }
+
+    public Student (String name){
+        this.name = name;
     }
 
     public String report() {
