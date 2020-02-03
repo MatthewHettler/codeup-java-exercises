@@ -3,99 +3,148 @@ package util;
 import java.util.Scanner;
 
 public class Input {
+
     private Scanner scanner;
 
-    public Input(){
+    public Input() {
         this.scanner = new Scanner(System.in);
     }
 
-    public String getString(){
-        String answer;
-        System.out.println("Enter a string: ");
-        answer = this.scanner.next();
-        return answer;
+    public void clear() {
+        this.scanner.nextLine();
     }
 
-    public String getString(String prompt) {
-        String answer;
-        System.out.println(prompt);
-        answer = this.scanner.next();
-        return answer;
+    public String getString() {
+        System.out.println("Input string...");
+        return this.scanner.nextLine();
     }
 
-    public boolean yesNo(){
-        String answer;
-        System.out.println("What is your answer? (yes/no): ");
-        answer = this.scanner.next();
-        return answer.toLowerCase().startsWith("y");
+    public boolean yesNo() {
+        System.out.println("Yes or No?");
+        String input = this.scanner.nextLine();
+        input = input.toLowerCase();
+        switch(input) {
+            case ("no"):
+                return false;
+            case ("n"):
+                return false;
+            case ("nope"):
+                return false;
+            case ("denied"):
+                return false;
+            case ("uh uh"):
+                return false;
+            case ("yes"):
+                return true;
+            case ("y"):
+                return true;
+            case ("yep"):
+                return true;
+            case ("sure"):
+                return true;
+            case ("si"):
+                return true;
+            case ("uh huh"):
+                return true;
+            case ("approved"):
+                return true;
+            case ("maybe"):
+                System.out.println("Ain't you cute?");
+                return yesNo();
+            default:
+                return yesNo();
+        }
     }
 
-    public boolean yesNo(String prompt){
-        String answer;
-        System.out.println(prompt);
-        answer = this.scanner.next();
-        return answer.toLowerCase().startsWith("y");
-    }
-
-    public int getInt(int min, int max) {
-        int answer;
+    public int getInteger(int min, int max) {
+        int input;
         do {
-            System.out.println("Enter an integer betweeen " + min + " and " + max +": ");
-            answer = this.scanner.nextInt();
-        } while (answer < min || answer > max);
-        return answer;
+            System.out.println("Enter a number between " + min + " and " + max + ":");
+            input = this.scanner.nextInt();
+            if (input < min || input > max) {
+                System.out.println("\nInput invalid\n");
+            }
+        } while (input < min || input > max);
+        System.out.println("\nInput acceptable\n");
+        return input;
     }
 
-    public int getInt(String prompt, int min, int max) {
-        int answer;
+    public int getIntegerSecret(int min, int max) {
+        int input;
         do {
-            System.out.println(prompt);
-            answer = this.scanner.nextInt();
-        } while (answer < min || answer > max);
-        return answer;
+            System.out.println("Enter a number between " + min + " and " + (max - 1) + ":");
+            input = this.scanner.nextInt();
+            if (input < min || input > max) {
+                System.out.println("\nInput invalid\n");
+            }
+        } while (input < min || input > max);
+        System.out.println("\nInput acceptable\n");
+        return input;
     }
 
     public int getInt() {
-        int answer;
-        System.out.println("Enter an integer: ");
-        answer = this.scanner.nextInt();
-        return answer;
-    }
-
-    public int getInt(String prompt) {
-        int answer;
-        System.out.println(prompt);
-        answer = this.scanner.nextInt();
-        return answer;
+        System.out.println("Input number...");
+        while (true) {
+            try {
+                int userInput = Integer.valueOf(this.scanner.nextLine());
+                System.out.println("\nInput acceptable\n");
+                return userInput;
+            } catch (NumberFormatException e) {
+                System.out.println("\nInvalid. Input not an integer. Try again.\n");
+            }
+        }
     }
 
     public double getDouble(double min, double max) {
-        double answer;
+        double input;
         do {
-            System.out.println("Enter a double betweeen " + min + " and " + max +": ");
-            answer = this.scanner.nextDouble();
-        } while (answer < min || answer > max);
-        return answer;
-    }
-
-    public double getDouble(String prompt, double min, double max) {
-        double answer;
-        do {
-            System.out.println(prompt);
-            answer = this.scanner.nextDouble();
-        } while (answer < min || answer > max);
-        return answer;
+            System.out.println("Enter a number between " + min + " and " + max + ".");
+            input = this.scanner.nextDouble();
+            if (input < min || input > max) {
+                System.out.println("\nInput invalid\n");
+            }
+        } while (input < min || input > max);
+        System.out.println("\nInput acceptable\n");
+        return input;
     }
 
     public double getDouble() {
-        return getDouble("Enter a double: ");
+        System.out.println("Input number...");
+        while (true) {
+            try {
+                double userInput = Double.valueOf(getString());
+                System.out.println("\nInput acceptable\n");
+                return userInput;
+            } catch (NumberFormatException e) {
+                System.out.println("\nInvalid. Input not an double. Try again.\n");
+            }
+        }
     }
 
-    public double getDouble(String prompt) {
-        double answer;
-        System.out.println(prompt);
-        answer = this.scanner.nextDouble();
-        return answer;
+    public long getHex() {
+        System.out.println("Input hexadecimal number");
+        while (true) {
+            try {
+                long hex =  Long.valueOf(scanner.next(), 16);
+                System.out.println("\nInput acceptable\n");
+                return hex;
+            } catch (NumberFormatException e) {
+                System.out.println("\nInvalid. Input not a hexadecimal. Try again.\n");
+            }
+        }
+    }
+
+    public long getBinary() {
+        System.out.println("\nInput binary number\n");
+        while (true) {
+            try {
+                long bin = Long.valueOf(scanner.nextLine(), 2);
+                System.out.println("\nInput acceptable\n");
+                return bin;
+            } catch (NumberFormatException e) {
+                System.out.println("\nInvalid. Input not in binary. Try again.\n");
+            }
+        }
     }
 
 }
