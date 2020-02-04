@@ -1,0 +1,14 @@
+package inheritance;
+
+public class Vehicle {
+    int numberOfTires;
+
+    public Vehicle(int numberOfTires) {
+        this.numberOfTires = numberOfTires;
+    }
+
+    public void go() {
+        System.out.println("Vehicle: Here we go");
+    }
+
+}
