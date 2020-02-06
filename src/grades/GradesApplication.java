@@ -2,7 +2,6 @@ package grades;
 
 import java.util.HashMap;
 import java.util.Scanner;
-
 import util.Input;
 
 public class GradesApplication {
@@ -22,7 +21,6 @@ public class GradesApplication {
 
         doStuff();
     }
-
 
     public static void doStuff() {
 
@@ -50,9 +48,7 @@ public class GradesApplication {
                 System.out.println("Goodbye, and have a wonderful day!");
             }
         }
-
     }
-
 
 }
 

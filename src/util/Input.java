@@ -40,6 +40,8 @@ public class Input {
                 return true;
             case ("yep"):
                 return true;
+            case ("yeah"):
+                return true;
             case ("sure"):
                 return true;
             case ("si"):
