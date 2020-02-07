@@ -1,9 +1,20 @@
+import java.util.ArrayList;
+
 public class ProgrammingPushups {
     public static void main(String[] args){
 //        System.out.println(multiply(5, 5));
 //        System.out.println(toThePower(5, 5));
-        System.out.println(sumOfBinaryNumbers("10", "11"));
-        System.out.println(sumOfBinaryNumbers("1010", "1100"));
+//        System.out.println(sumOfBinaryNumbers("10", "11"));
+//        System.out.println(sumOfBinaryNumbers("1010", "1100"));
+
+        String[] fruits = new String[]{"banana", "kiwi", "apple", "grapefruit", "pear", "jackfruit"};
+        int length = fruits.length;
+        ArrayList<String> newFruits = new ArrayList<>();
+        for (int i = 0; i < length; i++) {
+            newFruits.add(fruits[i]);
+        }
+        System.out.println(newFruits);
+
     }
 
     public static int multiply (int a, int b){
