@@ -7,13 +7,20 @@ public class ProgrammingPushups {
 //        System.out.println(sumOfBinaryNumbers("10", "11"));
 //        System.out.println(sumOfBinaryNumbers("1010", "1100"));
 
-        String[] fruits = new String[]{"banana", "kiwi", "apple", "grapefruit", "pear", "jackfruit"};
-        int length = fruits.length;
-        ArrayList<String> newFruits = new ArrayList<>();
-        for (int i = 0; i < length; i++) {
-            newFruits.add(fruits[i]);
-        }
-        System.out.println(newFruits);
+//        String[] fruits = new String[]{"banana", "kiwi", "apple", "grapefruit", "pear", "jackfruit"};
+//        int length = fruits.length;
+//        ArrayList<String> newFruits = new ArrayList<>();
+//        for (int i = 0; i < length; i++) {
+//            newFruits.add(fruits[i]);
+//        }
+//        System.out.println(newFruits);
+
+//        ArrayList<String> f = new ArrayList<>();
+//        String[] fruits = {"Kiwi","Apple","Grapes","Banana","Guava","Pear"};
+//        for (String fruit : fruits) {
+//            f.add(fruit);
+//        }
+//        System.out.println(f);
 
     }
 
