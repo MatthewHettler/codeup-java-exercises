@@ -93,6 +93,7 @@ public class Input {
                 return userInput;
             } catch (NumberFormatException e) {
                 System.out.println("\nInvalid. Input not an integer. Try again.\n");
+                e.printStackTrace();
             }
         }
     }

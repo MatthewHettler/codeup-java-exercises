@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class ProgrammingPushups {
     public static void main(String[] args){
@@ -21,6 +22,16 @@ public class ProgrammingPushups {
 //            f.add(fruit);
 //        }
 //        System.out.println(f);
+
+        String[] lines = {
+                "This is a line\n",
+                "This is a second line\n",
+                "This is a third line\n",
+                "This is a fourth line\n",
+                "This is the fifth and final line\n"
+        };
+        ArrayList<String> l = new ArrayList<>(Arrays.asList(lines));
+        System.out.println(l);
 
     }
 
