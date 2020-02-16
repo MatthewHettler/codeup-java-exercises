@@ -36,12 +36,17 @@ public class FileIOLecture {
         }
     }
 
-//    static void readFile() {
-//        try {
-//            Path poemFile = Paths.get("europa", "poem.txt");
-//            List<String>
-//        }
-//    }
+    static void readFile(){
+        try {
+            Path poemFile = Paths.get("europa", "poem.txt");
+            List<String> poemLines = Files.readAllLines(poemFile);
+            for (String line : poemLines) {
+                System.out.println(line);
+            }
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+    }
 
 //    static void writeFile() {
 //        List<String> fruit = new ArrayList<>();
