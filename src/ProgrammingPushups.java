@@ -23,15 +23,20 @@ public class ProgrammingPushups {
 //        }
 //        System.out.println(f);
 
-        String[] lines = {
-                "This is a line\n",
-                "This is a second line\n",
-                "This is a third line\n",
-                "This is a fourth line\n",
-                "This is the fifth and final line\n"
-        };
-        ArrayList<String> l = new ArrayList<>(Arrays.asList(lines));
-        System.out.println(l);
+//        String[] lines = {
+//                "This is a line\n",
+//                "This is a second line\n",
+//                "This is a third line\n",
+//                "This is a fourth line\n",
+//                "This is the fifth and final line\n"
+//        };
+//        ArrayList<String> l = new ArrayList<>(Arrays.asList(lines));
+//        System.out.println(l);
+
+//        System.out.println(compareNumbers(5,5));
+//        System.out.println(compareNumbers(10,20));
+//        System.out.println(compareNumbers(30,10));
+
 
     }
 
@@ -56,6 +61,34 @@ public class ProgrammingPushups {
         int b2 = Integer.parseInt(second, 2);
         int sum = b1 + b2;
         return Integer.toBinaryString(sum);
+    }
+
+    public static String compareNumbers(int x, int y) {
+        if (x > y){
+            return x + " is greater than " + y + ".";
+        } else if (x < y){
+            return x + " is less than " + y + ".";
+        } else if (x == y) {
+            return x + " is equal to " + y + ".";
+        } else {
+            return "Error!";
+        }
+    }
+
+    // This is a method that takes in a list of Integers and an int. It parses the list to find which pairs
+    // of Integers in the list when added together equals the int parameter. Return the result as a list of lists of Integers.
+
+
+    // Created a method to get the factorial of a number and output it in an array list.
+    private static ArrayList<Integer> factorial(int n) {
+        ArrayList<Integer> products = new ArrayList<>();
+        for(int i = 1; i <= n; i++)
+        {
+            if (n % i == 0) {
+                products.add(i);
+            }
+        }
+        return products;
     }
 
 }

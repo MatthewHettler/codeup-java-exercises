@@ -2,6 +2,7 @@ package grades;
 
 import java.util.HashMap;
 import java.util.Scanner;
+
 import util.Input;
 
 public class GradesApplication {
